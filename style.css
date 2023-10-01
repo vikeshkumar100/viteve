@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;600&family=Lato:wght@400;700&family=Quicksand:wght@300;400;600&display=swap');
+.spacer{
+    height:100vw;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    /* background-color: black; */
+}
+.body-div{
+    font-size: 16px;
+    font-family: 'AR One Sans', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: 'Quicksand', sans-serif;*/
+}
+.head{
+    /* border: 1px solid black; */
+    position:fixed;
+    width: 100%;
+    margin: 0px 0px 5px 0px;
+    border-radius: 30px;
+    /* color: white; */
+}
+.head div{
+    /* border: 1px red solid; */
+    font-size: 14px;
+    padding: 5px;
+    display:flex;
+    justify-content:left;
+    align-items:center;
+}
+.head div img{
+    margin:0px 10px 0px 5px;
+    width: 140px;
+}
+.nav{
+    background-color:rgb(148, 255, 251);
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight:600;
+    padding: 2px;
+    margin: 2px 10px;
+    border-radius: 35px;
+}
+.nav ul{
+    background-color:inherit;
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-flow:row wrap;
+    border-radius: 90px;  
+}
+.nav ul li{
+    border-radius: 90px;
+    background-color:inherit;
+    position: relative;
+    margin: 3px;
+}
+.nav ul li a{
+    background-color:transparent;
+    border-radius: 100px;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+.nav ul li input{
+    width: 100%;
+    position: relative;
+    background-color:azure;
+    font-size:20px;
+    border-radius:20px;
+    padding:0px 10px;
+}
+.nav a:hover ,a:active{
+    color:rgb(168, 4, 4);
+    font-size: 20px;
+}
+main{
+    border: 2px solid black;
+    position:absolute;
+}
