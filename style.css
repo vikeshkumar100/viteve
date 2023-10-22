@@ -4,22 +4,24 @@
     padding: 0;
     margin: 0;
     border: border-box;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
 }
-
 .body-div {
     font-size: 16px;
     font-family: 'AR One Sans', sans-serif;
-    width: 100%;
+    width: 100vw;
+    padding-top: 7%;
     /* font-family: 'Lato', sans-serif; */
     /* font-family: 'Quicksand', sans-serif;*/
 }
 
 .head {
-    position: fixed;
+    position:fixed;
     width: 100%;
+    top: 0;
     margin: 0px 0px 5px 0px;
-    z-index: 1;
+    z-index: 9999999;
+    background-color: rgb(255, 255, 255);
     /* color: white; */
 }
 
@@ -30,6 +32,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    background-color: transparent;
 }
 
 .head div img {
@@ -39,7 +42,7 @@
 }
 
 .nav {
-    background-color: rgb(148, 255, 251);
+    background-color: rgb(9, 9, 9);
     font-size: 22px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -60,7 +63,7 @@
 
 .nav ul li {
     border-radius: 90px;
-    background-color: inherit;
+    background-color: transparent;
     position: relative;
     margin: 3px;
 }
@@ -68,14 +71,14 @@
 .nav ul li a {
     background-color: transparent;
     border-radius: 100px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
 }
 
 .nav ul li input {
     width: 100%;
     position: relative;
-    background-color: azure;
+    background-color:white;
     font-size: 20px;
     border-radius: 20px;
     padding: 0px 10px;
@@ -83,7 +86,7 @@
 
 .nav a:hover,
 a:active {
-    color: rgb(175, 28, 28);
+    color: rgb(0, 255, 255);
     text-decoration: underline;
     position: relative;
     bottom: 2px;
@@ -92,17 +95,33 @@ a:active {
 .outer-box {
     border: 2px solid black;
     position: absolute;
-    top: 15%;
+    /* top: 15%; */
     width: 100%;
     margin: 0;
 }
 
-.home-box {
-    border: 1px solid red;
-    height: 100vh;
+.home-box{
+    background-image: url(images/home-bg.jpg);
+    background-size:cover;
+    background-blend-mode:luminosity;
+    background-color: rgb(186, 248, 255);
+    /* border: 1px solid red; */
+    min-height: 100vh;
     margin: 1px;
 }
-
+.home-box marquee{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 50px;
+    position:absolute;
+    top: 20vh;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid rgb(255, 255, 255); */
+    box-shadow: 0px 5px 10px rgb(67, 255, 255);
+    text-shadow: 0px -2px 10px rgb(67, 255, 255);
+}
 .event-box {
     border: 5px solid;
     display: flex;
@@ -125,22 +144,25 @@ a:active {
 }
 
 .registration-outer-box {
-    border: 5px solid;
+    /* border: 5px solid; */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top right, rgb(255, 255, 255), rgb(33, 208, 202));
+    background: linear-gradient(to top right, rgb(255, 255, 255), rgb(37, 236, 229));
 }
 
 .registration-inner-box {
-    border: 2px solid red;
-    height: auto;
+    border-radius: 60px;
     width: 60vw;
+}
+.registration-inner-box:hover{
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
 }
 
 .registration-top {
-    border: 1px solid green;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 20px;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
@@ -159,6 +181,7 @@ a:active {
 
 .registration-main {
     border: 2px solid;
+    border-radius: 20px;
     padding: 20px 30px;
 }
 
