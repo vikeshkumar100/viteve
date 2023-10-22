@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;600&family=Lato:wght@400;700&family=Quicksand:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;600&family=Lato:wght@400;700&family=Quicksand:wght@300;400;600&display=swap");
 
 * {
     padding: 0;
@@ -6,9 +6,10 @@
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
 }
+
 .body-div {
     font-size: 16px;
-    font-family: 'AR One Sans', sans-serif;
+    font-family: "AR One Sans", sans-serif;
     width: 100%;
     min-height: 100vh;
     padding-top: 7%;
@@ -17,7 +18,7 @@
 }
 
 .head {
-    position:fixed;
+    position: fixed;
     width: 100%;
     top: 0;
     margin: 0px 0px 5px 0px;
@@ -45,7 +46,7 @@
 .nav {
     background-color: rgb(9, 9, 9);
     font-size: 23px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 600;
     padding: 2px;
     margin: 1px 10px;
@@ -72,12 +73,13 @@
     background-color: transparent;
     color: white;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 .nav ul li input {
     width: 100%;
     position: relative;
-    background-color:white;
+    background-color: white;
     font-size: 20px;
     border-radius: 20px;
     padding: 0px 10px;
@@ -91,25 +93,21 @@ a:active {
     bottom: 2px;
 }
 
-.outer-box {
-    width: 100%;
-    margin: 0;
-}
-
-.home-box{
+.home-box {
     background-image: url(images/home-bg.jpg);
     background-size:cover;
-    background-blend-mode:luminosity;
+    background-blend-mode: luminosity;
     background-color: rgb(186, 248, 255);
     min-height: 90vh;
     margin: 1px;
 }
-.home-box marquee{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.home-box marquee {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(0, 0, 0);
     color: white;
     font-size: 50px;
-    position:absolute;
+    position: absolute;
     top: 36vh;
     font-weight: bolder;
     color: rgb(255, 255, 255);
@@ -117,6 +115,7 @@ a:active {
     box-shadow: 0px 5px 10px rgb(67, 255, 255);
     text-shadow: 0px -2px 10px rgb(67, 255, 255);
 }
+
 .event-box {
     border: 5px solid;
     display: flex;
@@ -144,37 +143,45 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, rgb(24, 193, 219),rgb(216, 215, 246),rgb(113, 239, 239),rgb(37, 236, 229),rgb(208, 211, 255),rgb(0, 200, 255));
+    background: linear-gradient(45deg,
+            rgb(24, 193, 219),
+            rgb(222, 221, 243),
+            rgb(113, 239, 239),
+            rgb(103, 252, 247),
+            rgb(98, 246, 246),
+            rgb(216, 219, 255),
+            rgb(0, 200, 255));
 }
 
 .registration-inner-box {
     width: 60vw;
-    min-height: 75vh;
+    padding: 3% 0;
     border-radius: 40px;
     background-color: transparent;
-    box-shadow: 5px 5px 30px rgb(0, 0, 0);
+    box-shadow: 0px -5px 40px rgb(176, 152, 194);
+    transition:0.2s;
 }
-.registration-inner-box:hover{
-    box-shadow: 5px 5px 500px rgb(202, 160, 253);
+
+.registration-inner-box:hover {
+    box-shadow: 0px 5px 30px rgb(45, 45, 45);
 }
 
 .registration-top {
-    background-color:rgb(215, 235, 254);
+    background-color: rgb(215, 235, 254);
     border-radius: 30px;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
-    position:relative;
-    top: 5vh;
 }
 
 .registration-top img {
     width: 30%;
 }
 
-.registration-top span,h2{
+.registration-top span,
+h2 {
     font-size: 25px;
     text-decoration: underline;
     background-color: transparent;
@@ -183,8 +190,6 @@ a:active {
 .registration-main {
     border-radius: 30px;
     padding: 20px 30px;
-    position:relative;
-    top: 5vh;
 }
 
 .registration-main form {
@@ -231,11 +236,54 @@ button:hover {
 }
 
 .footer-box {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(148, 255, 251);
-    height: 30vh;
+    background-color: rgb(0, 0, 0);
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
 }
-
-.footer-box div {
-    background-color: rgb(148, 255, 251);
+.footer-icon{
+    /* border: 2px solid red; */
+    font-size: 50px;
+    color: aliceblue;
+    background-color:transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 60vw;
+}
+.footer-icon a,span{
+    background-color: transparent;
+}
+.footer-icon img{
+    background-color:transparent;
+    width: 40px;
+    height: 40px;
+    transition:0.4s;
+}
+.footer-icon img:hover{
+    width: 45px;
+    height: 45px;
+    transform: rotate(360deg);
+}
+.footer-icon img:active{
+    width: 35px;
+    height: 35px;
+    transform: 0.1s;
+    transform: rotate(-360deg);
+}
+.footer-logo{
+    /* border: 2px solid red; */
+    font-size: 32px;
+    font-weight: bold;
+    background-color: transparent;
+    color:white;
+    text-shadow: 0px 4px 15px aqua;
+}
+.footer-content{
+    font-size: 16px;
+    background-color: transparent;
+    color:white;
 }
