@@ -95,7 +95,8 @@ a:active{
 
 .home-box marquee {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.566);
+    backdrop-filter:blur(2px);
     color: white;
     font-size: 50px;
     position: absolute;
@@ -149,8 +150,7 @@ a:active{
     background-color: rgb(55, 55, 55);
 }
 
-.event-box section {
-    /* border: 2px solid indigo; */
+.event-section {
     min-height: 200vh;
     width: 100%;
     position: relative;
@@ -168,9 +168,56 @@ a:active{
     flex-flow: column nowrap;
     padding-top: 8vh;
 }
+.event-section h2,h3{
+    font-size: 38px;
+}
+.event-container{
+    margin: 40px 0px;
+}
+.event-container>h2{
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+}
 .card-box{
-
-
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    padding: 10px;
+    margin:auto;
+}
+.card{
+    background-color: rgba(252, 252, 252, 0.81);
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 20vw;
+    height: 25vh;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    font-size: 26px;
+    box-shadow: 0px 0px 5px rgba(181, 176, 175, 0.762);
+    transition: ease-in-out 0.4s;
+}
+.card:hover{
+    background-color: rgba(181, 179, 179, 0.384);
+    box-shadow: 0px 0px 10px black;
+}
+.card:active{
+    background-color: rgb(73, 71, 71);
+    box-shadow: 0px 0px 0px black;
+    height: 24vh;
+}
+.card:hover h3{
+    transition: ease-in-out 0.4s;
+    font-size: 48px;
+}
+.card:hover div{
+    transition: ease-in-out 0.4s;
+    font-size: 20px;
 }
 .registration-outer-box {
     /* border: 5px solid; */
