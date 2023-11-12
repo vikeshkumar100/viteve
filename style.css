@@ -9,6 +9,52 @@
     scroll-padding-top: 10vh;
 }
 
+@media only screen and (max-width:800px){
+    #home{
+        background-image: url(images/home-bg_mobile.jpg) !important;
+        background-size:contain !important;
+        background-blend-mode: luminosity;
+        background-color: rgba(35, 155, 157, 0.79);
+        min-height: 90vh;
+        margin-top: 10vh;
+        filter:brightness(80%);
+    }
+    .head div{
+        margin-left: 4px;
+        font-size: 3px;
+    }
+    .head div img{
+        display: none;
+    }
+    #search{
+        display: none !important;
+    }
+    .nav{
+        font-size: 16px !important;
+    }
+    .event-box aside{
+        display: none;
+    }
+    .card-box{
+        flex-flow: column wrap !important;
+    }
+    .card{
+        width: 60vw !important;
+        height: 30vh !important;
+    }
+    .registration-inner-box{
+        margin: 20px 0px;
+        width: 85vw !important;
+    }
+    .footer-icon{
+        width: 90vw !important;
+    }
+    .head div img{
+        width:90px !important;
+        height:26.46px !important;
+    }
+}
+
 .body-div {
     font-size: 16px;
     font-family: "AR One Sans", sans-serif;
@@ -85,12 +131,17 @@ a:active{
 
 
 .home-box {
+    min-height: 90vh;
+    margin-top: 10vh;
+}
+#home{
     background-image: url(images/home-bg.jpg);
     background-size:cover;
     background-blend-mode: luminosity;
-    background-color: rgb(186, 248, 255);
+    background-color: rgba(35, 155, 157, 0.79);
     min-height: 90vh;
     margin-top: 10vh;
+    filter:brightness(80%);
 }
 
 .home-box marquee {
@@ -144,6 +195,7 @@ a:active{
     box-shadow: 0px 0px 10px rgb(18, 146, 146);
     border-radius: 10%;
     transition: ease-in-out 0.2s;
+    cursor: pointer;
 }
 
 .event-box aside li:hover{
@@ -168,8 +220,8 @@ a:active{
     flex-flow: column nowrap;
     padding-top: 8vh;
 }
-.event-section h2,h3{
-    font-size: 38px;
+.event-head h2{
+    font-size: 44px;
 }
 .event-container{
     margin: 40px 0px;
@@ -200,7 +252,8 @@ a:active{
     justify-content: space-around;
     font-size: 26px;
     box-shadow: 0px 0px 5px rgba(181, 176, 175, 0.762);
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
 }
 .card:hover{
     background-color: rgba(181, 179, 179, 0.384);
@@ -212,12 +265,16 @@ a:active{
     height: 24vh;
 }
 .card:hover h3{
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.5s;
     font-size: 48px;
 }
 .card:hover div{
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.5s;
     font-size: 20px;
+}
+.card:hover::after{
+    color: rgb(255, 0, 0);
+    content: "Click to see more";
 }
 .registration-outer-box {
     /* border: 5px solid; */
@@ -314,6 +371,10 @@ button:hover {
 .button {
     width: 150px;
     margin: 20px 0px 0px 0px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.button:active{
+    transform: scale(90%);
 }
 
 .footer-box {
