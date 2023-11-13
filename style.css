@@ -9,50 +9,6 @@
     scroll-padding-top: 10vh;
 }
 
-@media only screen and (max-width:800px){
-    #home{
-        background-image: url(images/home-bg_mobile.jpg) !important;
-        background-size:contain !important;
-    }
-    .head div{
-        margin-left: 4px;
-        font-size: 3px;
-    }
-    .head div img{
-        display: none;
-    }
-    #search{
-        display: none !important;
-    }
-    .nav{
-        width: 100% !important;
-        font-size: 14px !important;
-        margin: 1px 1px !important;
-    }
-    .event-box aside{
-        display: none;
-    }
-    .card-box{
-        flex-flow: column wrap !important;
-        width: 100% !important;
-    }
-    .card{
-        width: 80vw !important;
-        height: 30vh !important;
-    }
-    .registration-inner-box{
-        margin: 20px 0px;
-        width: 100vw !important;
-    }
-    .footer-icon{
-        width: 90vw !important;
-    }
-    .head div img{
-        width:90px !important;
-        height:26.46px !important;
-    }
-}
-
 .body-div {
     font-size: 16px;
     font-family: "AR One Sans", sans-serif;
@@ -77,6 +33,9 @@
     justify-content: left;
     align-items: center;
     background-color:transparent;
+}
+.head h2{
+    display: none;
 }
 
 .head div img {
@@ -126,7 +85,6 @@ a:active{
     border-radius: 20px;
     padding: 0px 10px;
 }
-
 
 .home-box {
     min-height: 90vh;
@@ -241,8 +199,8 @@ a:active{
     background-color: rgba(252, 252, 252, 0.81);
     /* border: 1px solid black; */
     border-radius: 20px;
-    width: 20vw;
-    height: 25vh;
+    width: 21vw;
+    height: 28vh;
     margin: 20px;
     padding: 10px;
     display: flex;
@@ -250,24 +208,34 @@ a:active{
     justify-content: space-around;
     font-size: 26px;
     box-shadow: 0px 0px 5px rgba(181, 176, 175, 0.762);
-    transition: ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s 0.1s;
     cursor: pointer;
+}
+.card h3{
+    border-radius: 20px;
+    padding-left: 10px;
 }
 .card:hover{
     background-color: rgba(181, 179, 179, 0.384);
     box-shadow: 0px 0px 10px black;
+    transition: all ease-in-out 0.3s 0.1s;
+    transform: scale(110%);
 }
 .card:active{
     background-color: rgb(73, 71, 71);
     box-shadow: 0px 0px 0px black;
     height: 24vh;
+    transition: all ease-in-out 0.2s 0.1s;
+    transform: scale(100%);
 }
 .card:hover h3{
-    transition: ease-in-out 0.5s;
-    font-size: 48px;
+    transition: all ease-in-out 0.6s 0.1s;
+    font-size: 38px;
+    color: white;
+    background-color: black;
 }
 .card:hover div{
-    transition: ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s 0.1s;
     font-size: 20px;
 }
 .card:hover::after{
@@ -367,12 +335,8 @@ button:hover {
 }
 
 .button {
-    width: 150px;
+    width: 120px;
     margin: 20px 0px 0px 0px;
-    transition: all 0.2s ease-in-out 0s;
-}
-.button:active{
-    transform: scale(90%);
 }
 
 .footer-box {
@@ -383,6 +347,11 @@ button:hover {
     justify-content: space-evenly;
     align-items: center;
     flex-flow: column nowrap;
+}
+.footer-content{
+    font-size: 16px;
+    background-color: transparent;
+    color:white;
 }
 .footer-icon{
     /* border: 2px solid red; */
@@ -401,29 +370,80 @@ button:hover {
     background-color:transparent;
     width: 40px;
     height: 40px;
-    transition:0.4s;
 }
 .footer-icon img:hover{
     width: 45px;
     height: 45px;
     transform: rotate(360deg);
+    transition:all ease-in-out 0.4s 0.1s;
 }
 .footer-icon img:active{
     width: 35px;
     height: 35px;
-    transform: 0.1s;
+    transition:all ease-in-out 0.2s;
     transform: rotate(-360deg);
 }
-.footer-logo{
+.footer-logo a{
     /* border: 2px solid red; */
     font-size: 32px;
     font-weight: bold;
-    background-color: transparent;
     color:white;
+    text-decoration: none;
     text-shadow: 0px 4px 15px aqua;
 }
-.footer-content{
-    font-size: 16px;
-    background-color: transparent;
-    color:white;
+
+.footer-logo:hover{
+    transition: all ease-in-out 0.3s;
+    transform: scale(110%);
+}
+
+
+
+@media only screen and (max-width:800px){
+    #home{
+        background-image: url(images/home-bg_mobile.jpg) !important;
+        background-size:contain !important;
+    }
+    .head div{
+        margin-left: 4px;
+        font-size: 3px;
+    }
+    .head h1{
+        display: none;
+    }
+    .head h2{
+        display:inline-block !important;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    #search{
+        display: none !important;
+    }
+    .nav{
+        width: 100% !important;
+        font-size: 14px !important;
+        margin: 1px 1px !important;
+    }
+    .event-box aside{
+        display: none;
+    }
+    .card-box{
+        flex-flow: column wrap !important;
+        width: 100% !important;
+    }
+    .card{
+        width: 80vw !important;
+        height: 30vh !important;
+    }
+    .registration-inner-box{
+        margin: 20px 0px;
+        width: 100vw !important;
+    }
+    .footer-icon{
+        width: 90vw !important;
+    }
+    .head div img{
+        width:90px !important;
+        height:26.46px !important;
+    }
 }
