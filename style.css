@@ -5,15 +5,19 @@
     margin: 0;
     box-sizing: border-box;
     background-color: transparent;
-    /* scroll-behavior: smooth; */
-    scroll-padding-top: 10vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9vh;
 }
 
-@keyframes text{
-    from{
+/* :root{
+    --primary-color:rgb(63, 220, 231);
+} */
+@keyframes text {
+    from {
         text-shadow: 0px 0px 10px rgb(255, 0, 0);
     }
-    to{
+
+    to {
         box-shadow: 5px 10px 10px rgb(118, 115, 126);
     }
 }
@@ -41,16 +45,18 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    background-color:transparent;
+    background-color: transparent;
+    height: 5vh;
 }
-.head h2{
+
+.head h2 {
     display: none;
 }
 
 .head div img {
     margin: 0px 10px 0px 5px;
-    width:140px;
-    height:46.46px;
+    width: 120px;
+    height: 36.46px;
 }
 
 .nav {
@@ -59,61 +65,59 @@
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
     padding: 2px;
-    margin: 1px 10px;
+    margin: 1px 5px;
     border-radius: 35px;
 }
 
 .nav ul {
     background-color: inherit;
-    list-style-type:none;
+    list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-flow: row wrap;
     border-radius: 90px;
+    padding: 0 40px;
 }
-.navigator li a{
+
+.navigator li a {
     color: white;
     text-decoration: none;
     transition: 0.5s;
-    margin: 100px 0px;
 }
+
 .navigator a:hover,
-a:active{
+a:active {
     color: rgb(0, 255, 255);
     text-decoration: underline;
     position: relative;
     bottom: 2px;
 }
 
-.nav ul li input {
-    width: 100%;
-    position: relative;
-    background-color: white;
-    font-size: 20px;
-    border-radius: 20px;
-    padding: 0px 10px;
+.home-box {
+    min-height: 92vh;
+    margin-top: 9vh;
 }
 
-.home-box {
-    min-height: 90vh;
-    margin-top: 10vh;
-}
-#home{
+#home {
     background-image: url(images/home-bg.jpg);
-    background-size:cover;
+    background-size: contain;
+    background-position: center;
     background-blend-mode: luminosity;
     background-color: rgba(35, 155, 157, 0.79);
-    min-height: 90vh;
-    filter:brightness(80%);
+    min-height: 92vh;
+    filter: brightness(80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-box marquee {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgba(0, 0, 0, 0.566);
-    backdrop-filter:blur(2px);
+    backdrop-filter: blur(2px);
     color: white;
-    font-size: 50px;
+    font-size: 45px;
     position: absolute;
     top: 36vh;
     font-weight: bolder;
@@ -141,17 +145,18 @@ a:active{
     width: auto;
     padding: 20px;
     position: sticky;
-    top: 10%;
+    top: 9%;
 }
 
-.event-box aside ul{
+.event-box aside ul {
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
 }
-.event-box aside li{
+
+.event-box aside li {
     font-size: 20px;
     margin: 30px 40px 2px 5px;
     padding: 4px;
@@ -163,7 +168,7 @@ a:active{
     cursor: pointer;
 }
 
-.event-box aside li:hover{
+.event-box aside li:hover {
     background-color: rgb(55, 55, 55);
 }
 
@@ -185,26 +190,36 @@ a:active{
     flex-flow: column nowrap;
     padding-top: 8vh;
 }
-.event-head h2{
+
+.event-head h2 {
     font-size: 44px;
 }
-.event-container{
+
+.event-container {
     margin: 40px 0px;
 }
-.event-container>h2{
+
+.event-container>h2 {
     text-decoration: none;
     font-size: 40px;
     text-align: center;
 }
-.card-box{
+
+.card-box {
     width: 85%;
     display: flex;
     flex-flow: row wrap;
-    justify-content:flex-start;
+    justify-content: flex-start;
     padding: 10px;
-    margin:auto;
+    margin: auto;
 }
-.card{
+
+.card-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
     background-color: rgba(252, 252, 252, 0.81);
     /* border: 1px solid black; */
     border-radius: 20px;
@@ -220,36 +235,43 @@ a:active{
     transition: all ease-in-out 0.5s 0.1s;
     cursor: pointer;
 }
-.card h3{
+
+.card h3 {
     border-radius: 20px;
     padding-left: 10px;
 }
-.card:hover{
+
+.card:hover {
     background-color: rgba(181, 179, 179, 0.384);
     box-shadow: 0px 0px 10px black;
     transition: all ease-in-out 0.3s 0s;
     transform: scale(110%);
 }
-.card:active{
+
+.card:active {
     background-color: rgb(73, 71, 71);
     box-shadow: 0px 0px 0px black;
     transition: all ease-in-out 0.2s 0s;
     transform: scale(100%);
 }
-.card:hover h3{
+
+.card:hover h3 {
     transition: all ease-in-out 0.6s 0.1s;
     font-size: 38px;
     color: white;
     background-color: black;
 }
-.card:hover div{
+
+.card:hover div {
     transition: all ease-in-out 0.5s 0.1s;
     font-size: 20px;
 }
-.card:hover::after{
+
+.card:hover::after {
     color: rgb(255, 0, 0);
-    content: "Click to see more";
+    content: "Click to register";
 }
+
 .registration-outer-box {
     /* border: 5px solid; */
     min-height: 100vh;
@@ -271,7 +293,7 @@ a:active{
     padding: 3% 0;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.515);
-    transition:0.2s;
+    transition: 0.2s;
 }
 
 .registration-inner-box:hover {
@@ -281,7 +303,7 @@ a:active{
 .registration-top {
     background-color: rgb(215, 235, 254);
     border-radius: 30px;
-    padding: 20px 30px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -289,7 +311,7 @@ a:active{
 }
 
 .registration-top img {
-    width: 30%;
+    width: 25%;
 }
 
 .registration-top span,
@@ -301,50 +323,69 @@ h2 {
 
 .registration-main {
     border-radius: 30px;
-    padding: 20px 30px;
+    padding: 40px 30px 10px;
 }
 
 .registration-main form {
     display: flex;
     justify-content: space-evenly;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
-.registration-main form label {
-    font-weight: bold;
-    font-size: 22px;
+.form-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.form-flex div{
+    height: 11vh;
 }
 
-.registration-main form input,
-select {
+.form-label {
+    display: block;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 6px;
+}
+
+.form-input {
     font-size: 20px;
-    width: 90%;
+    width: 380px;
     padding: 6px;
-    margin: 3px 10px 10px 4px;
     border-radius: 5px;
 }
 
 .registration-main form input:hover,
 select:hover,
 button:hover {
-    border-color: rgb(241, 171, 65);
-}
-
-.registration-main span {
-    margin: 0px 10px 0px 0px;
-}
-
-.form-flex {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    align-items: center;
+    border-color: rgb(241, 65, 65);
 }
 
 .button {
-    width: 120px;
-    margin: 20px 0px 0px 0px;
+    width: 180px;
+    margin: 40px 0px 0px 0px;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 242, 255, 0.688);
+    transition: all ease-in-out 0.1s;
+}
+
+.error{
+    color: rgb(249, 31, 31);
+}
+
+.button:active {
+    transform: scale(90%);
+}
+.info{
+    padding-top: 10px;
+    align-self: flex-start;
 }
 
 .footer-box {
@@ -356,154 +397,188 @@ button:hover {
     align-items: center;
     flex-flow: column nowrap;
 }
-.footer-content{
+
+.footer-content {
     font-size: 16px;
     background-color: transparent;
-    color:white;
+    color: white;
 }
-.footer-icon{
+
+.footer-icon {
     /* border: 2px solid red; */
     font-size: 50px;
     color: aliceblue;
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 60vw;
 }
-.footer-icon a,span{
+
+.footer-icon a,
+span {
     background-color: transparent;
 }
-.footer-icon img{
-    background-color:transparent;
+
+.footer-icon img {
+    background-color: transparent;
     width: 40px;
     height: 40px;
 }
-.footer-icon img:hover{
+
+.footer-icon img:hover {
     width: 45px;
     height: 45px;
     transform: rotate(360deg);
-    transition:all ease-in-out 0.4s 0.1s;
+    transition: all ease-in-out 0.4s 0.1s;
 }
-.footer-icon img:active{
+
+.footer-icon img:active {
     width: 35px;
     height: 35px;
-    transition:all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
     transform: rotate(-360deg);
 }
-.footer-logo a{
+
+.footer-logo a {
     /* border: 2px solid red; */
     font-size: 32px;
     font-weight: bold;
-    color:white;
+    color: white;
     text-decoration: none;
     text-shadow: 0px 4px 15px aqua;
 }
 
-.footer-logo:hover{
+.footer-logo:hover {
     transition: all ease-in-out 0.3s;
     transform: scale(110%);
 }
 
-
-
-@media only screen and (max-width:800px){
-    .head div{
+@media only screen and (max-width: 800px) {
+    .head div {
         margin-left: 4px;
         font-size: 3px;
         height: 3.5vh;
     }
-    .head h1{
+
+    .head div img {
+        width: 90px !important;
+        height: 26.46px !important;
+    }
+
+    .head h1 {
         display: none;
     }
-    .head h2{
-        display:inline-block !important;
+
+    .head h2 {
+        display: inline-block !important;
         text-decoration: none;
         font-size: 24px;
     }
-    #search{
-        display: none !important;
-    }
-    .nav{
-        width: 100% !important;
+
+    .nav {
         font-size: 14px !important;
-        margin: 1px 1px !important;
+        margin: 1px 0px !important;
         border-radius: 0;
     }
-    #home{
-        background-image: url(images/home-bg_mobile.jpg) !important;
-        background-size:contain !important;
+
+    #hide {
+        display: none;
     }
-    .home-box{
+
+    .nav ul {
+        justify-content: space-around;
+        padding: 0px !important;
+    }
+
+    #home {
+        background-image: url(images/home-bg_mobile.jpg) !important;
+        background-size: contain !important;
+    }
+
+    .home-box {
         margin-top: 5vh;
     }
+
     .home-box marquee {
         font-size: 35px;
-
     }
-    .event-head h2{
+
+    .event-head h2 {
         font-size: 28px;
     }
-    .event-container{
+
+    .event-container {
         margin: 20px 0px;
     }
-    .event-container>h2{
+
+    .event-container>h2 {
         text-decoration: none;
         font-size: 26px;
         text-align: center;
     }
-    .event-box aside{
+
+    .event-box aside {
         display: none;
     }
-    .card-box{
-        width: 100vw !important;
-        padding-left: 0;
+
+    .registration-inner-box {
+        margin: 20px 0px;
+        width: 98% !important;
     }
-    .card{
+
+    .card-box {
+        width: 100vw !important;
+        padding-left: 1vw;
+    }
+
+    .card {
         width: 45vw !important;
         height: 20vh !important;
         line-height: 32px;
         margin-right: 0;
         margin-left: 10px;
     }
-    .card h3{
+
+    .card h3 {
         font-size: 26px;
         margin-bottom: 10px;
+        padding: 5px;
     }
-    .card:hover{
+
+    .card:hover {
         background-color: rgba(181, 179, 179, 0.384);
         box-shadow: 0px 0px 10px black;
         transition: all ease-in-out 0.3s 0.1s;
         transform: scale(105%);
     }
-    .card:active{
+
+    .card:active {
         background-color: rgb(73, 71, 71);
         box-shadow: 0px 0px 0px black;
         transition: all ease-in-out 0.2s 0s;
         transform: scale(100%);
     }
-    .card:hover h3{
+
+    .card:hover h3 {
         transition: all ease-in-out 0.6s 0.1s;
-        font-size: 32px;
+        font-size: 26px;
         color: white;
         background-color: black;
+        line-height: 25px;
+        overflow: hidden;
     }
-    .card:hover div{
+
+    .card:hover div {
         transition: all ease-in-out 0.5s 0.1s;
         font-size: 20px;
     }
-    .card:hover::after{
+
+    .card:hover::after {
         content: none;
     }
-    .registration-inner-box{
-        margin: 20px 0px;
-        width: 100vw !important;
-    }
-    .footer-icon{
+
+    .footer-icon {
         width: 90vw !important;
-    }
-    .head div img{
-        width:90px !important;
-        height:26.46px !important;
     }
 }
