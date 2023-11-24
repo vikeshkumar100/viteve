@@ -526,6 +526,9 @@ span {
         margin: 20px 0px;
         width: 98% !important;
     }
+    .form-input {
+        width: 300px;
+    }
 
     .card-box {
         width: 100vw !important;
