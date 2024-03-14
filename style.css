@@ -206,10 +206,10 @@ a:active {
 }
 
 .card-box {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 10px;
     margin: auto;
 }
